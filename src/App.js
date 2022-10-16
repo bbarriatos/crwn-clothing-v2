@@ -31,7 +31,7 @@ const categories = [
   },
 ];
 
-const App = () => {
+const App = ({}) => {
   return <Directory categories={categories}></Directory>;
 };
 
