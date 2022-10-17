@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import Navigation from "./routes/navigation/Navigation";
 import Home from "./routes/home/Home";
 
 import "./components/directory/directory-style.scss";
@@ -11,9 +12,9 @@ const Shop = () => {
 const App = () => {
   return (
     <Routes>
-      <Route path="/home" element={<Home />}>
+      <Route path="/" element={<Navigation />}>
+        <Route index element={<Home />}></Route>
         <Route path="shop" element={<Shop />}></Route>
-        {"/home/shop"}
       </Route>
     </Routes>
   );
