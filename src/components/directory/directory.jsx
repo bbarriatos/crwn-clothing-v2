@@ -1,7 +1,7 @@
 import React from "react";
-import CategoryItem from "../category-item/categoryItem";
+import CategoryItem from "../category-item/CategoryItem";
 
-const directory = ({ categories }) => {
+const Directory = ({ categories }) => {
   return (
     <div className="directory-container">
       {categories.map((category) => {
@@ -13,4 +13,4 @@ const directory = ({ categories }) => {
   );
 };
 
-export default directory;
+export default Directory;

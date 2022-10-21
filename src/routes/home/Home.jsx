@@ -1,5 +1,5 @@
 import React from "react";
-import Directory from "../../components/directory/directory";
+import Directory from "../../components/directory/Directory";
 
 import "../../components/directory/directory-style.scss";
 
