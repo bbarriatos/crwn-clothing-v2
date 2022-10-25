@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { UserProvider } from "./context/UserContext.jsx";
+import { ProductsProvider } from "./context/ProductsContext.jsx";
+import { CartProvider } from "./context/CartContext.jsx";
 import App from "./App";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
@@ -11,7 +13,11 @@ root.render(
   <Fragment>
     <BrowserRouter>
       <UserProvider>
-        <App />
+        <ProductsProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </ProductsProvider>
       </UserProvider>
     </BrowserRouter>
   </Fragment>
