@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { UserProvider } from "./context/UserContext.jsx";
-import { ProductsProvider } from "./context/ProductsContext.jsx";
+import { CategoriesProvider } from "./context/CategoriesContext.jsx";
 import { CartProvider } from "./context/CartContext.jsx";
 import App from "./App";
 import "./index.scss";
@@ -13,11 +13,11 @@ root.render(
   <Fragment>
     <BrowserRouter>
       <UserProvider>
-        <ProductsProvider>
+        <CategoriesProvider>
           <CartProvider>
             <App />
           </CartProvider>
-        </ProductsProvider>
+        </CategoriesProvider>
       </UserProvider>
     </BrowserRouter>
   </Fragment>
