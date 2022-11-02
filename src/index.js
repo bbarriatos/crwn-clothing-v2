@@ -1,25 +1,24 @@
 import React, { Fragment } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import { UserProvider } from "./context/UserContext.jsx";
-import { CategoriesProvider } from "./context/CategoriesContext.jsx";
+import { Provider } from "react-redux";
 import { CartProvider } from "./context/CartContext.jsx";
 import App from "./App";
+import { store } from "./store/store";
+
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Fragment>
-    <BrowserRouter>
-      <UserProvider>
-        <CategoriesProvider>
-          <CartProvider>
-            <App />
-          </CartProvider>
-        </CategoriesProvider>
-      </UserProvider>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <CartProvider>
+          <App />
+        </CartProvider>
+      </BrowserRouter>
+    </Provider>
   </Fragment>
 );
 
