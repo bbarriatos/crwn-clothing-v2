@@ -6,6 +6,7 @@ import "../../components/directory/directory-style.scss";
 const Home = () => {
   return (
     <div>
+    <h1>test</h1>
       <Directory></Directory>
     </div>
   );
