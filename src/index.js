@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import { CartProvider } from "./context/CartContext.jsx";
 import App from "./App";
 import { store } from "./store/store";
 
@@ -14,9 +13,7 @@ root.render(
   <Fragment>
     <Provider store={store}>
       <BrowserRouter>
-        <CartProvider>
-          <App />
-        </CartProvider>
+        <App />
       </BrowserRouter>
     </Provider>
   </Fragment>
